@@ -1,37 +1,37 @@
 import React from 'react';
 
 const ZoomedOutView = () => {
-    const imageUrl = "/7_20241209_024613.png"; // Correct way to reference public images
+    const imageUrl = "/7_20241209_024613.png";  // Directly reference the public image
 
     return (
         <div style={{
             position: 'relative',
-            width: '200px',       // Adjust as needed
-            height: '150px',      // Adjust as needed
+            width: '200px',       
+            height: '150px',      
             border: '1px solid #ccc',
-            overflow: 'hidden'   // Hide overflow for the pointer
+            overflow: 'hidden'  
         }}>
             <img
                 src={imageUrl}
                 alt="Zoomed-Out View"
                 style={{
-                    width: '100%',    // Ensure the image fits the container
+                    width: '100%',    
                     height: 'auto',
-                    transform: 'scale(0.2)' // Zoom out image to fit in view
+                    transform: 'scale(0.2)' 
                 }}
             />
 
             {/* Pointer to indicate the viewed area */}
             <div style={{
                 position: 'absolute',
-                top: '50%',         // Center the pointer vertically
-                left: '50%',        // Center the pointer horizontally
-                transform: 'translate(-50%, -50%)', // Center the pointer precisely
-                width: '10px',       // Pointer width
-                height: '10px',      // Pointer height
-                backgroundColor: 'red', // Pointer color
-                borderRadius: '50%',  // Make it a circle
-                pointerEvents: 'none'  // Ensure the pointer doesn't interfere with events
+                top: '50%',         
+                left: '50%',        
+                transform: 'translate(-50%, -50%)', 
+                width: '10px',       
+                height: '10px',      
+                backgroundColor: 'red', 
+                borderRadius: '50%',  
+                pointerEvents: 'none'  
             }} />
         </div>
     );
