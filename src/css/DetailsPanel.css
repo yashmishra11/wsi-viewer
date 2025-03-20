@@ -1,0 +1,22 @@
+/* Details Panel Styles */
+.left-panel {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #ddd;
+}
+
+.left-panel h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.left-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.left-panel li {
+    margin-bottom: 5px;
+}

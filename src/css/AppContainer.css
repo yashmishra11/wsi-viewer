@@ -1,0 +1,6 @@
+/* General app container */
+.app-container {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* Left panel width and remaining space */
+    height: 100%; /* Take full height of the parent */
+}

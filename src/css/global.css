@@ -1,0 +1,11 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* App Container (Grid Layout) */
+#root { /* Target the root element where React renders */
+    height: 100vh; /* Make it full viewport height */
+}

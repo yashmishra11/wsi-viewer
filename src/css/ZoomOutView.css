@@ -1,0 +1,36 @@
+/* Zoomed-Out View Styles */
+.top-right-panel {
+    position: relative;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+}
+
+/* Optional: Style for the ZoomedOutView container */
+.zoomed-out-view-container {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+/* Optional: Style for the ZoomedOutView image */
+.zoomed-out-view-image {
+    width: 100%;
+    height: auto;
+    transform: scale(0.2); /* Adjust scale as needed */
+}
+
+/* Optional: Style for the ZoomedOutView pointer */
+.zoomed-out-view-pointer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    pointer-events: none;
+}
