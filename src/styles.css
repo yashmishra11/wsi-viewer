@@ -1,0 +1,107 @@
+/* styles.css */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* App Container (Grid Layout) */
+  #root { /* Target the root element where React renders */
+    height: 100vh; /* Make it full viewport height */
+  }
+  
+  /* General app container */
+  .app-container {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* Left panel width and remaining space */
+    height: 100%; /* Take full height of the parent */
+  }
+  
+  /* Details Panel Styles */
+  .left-panel {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #ddd;
+  }
+  
+  .left-panel h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+  
+  .left-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .left-panel li {
+    margin-bottom: 5px;
+  }
+  
+  /* Zoomed-Out View Styles */
+  .top-right-panel {
+    position: relative;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+  }
+  
+  /* WSI Viewer Styles */
+  .center-panel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure it takes the full height */
+  }
+  
+  /* Bounding Box Styles (can be adjusted) */
+  .bounding-box {
+    position: absolute;
+    border: 2px solid red;
+    pointer-events: none; /* Make sure the bounding box doesn't block events */
+  }
+  
+  .bounding-box span {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    background-color: red;
+    color: white;
+    padding: 2px 4px;
+    font-size: 12px;
+  }
+  
+  /* Optional: Style for the ZoomedOutView container */
+  .zoomed-out-view-container {
+      position: relative;
+      width: 200px;
+      height: 150px;
+      border: 1px solid #ccc;
+      overflow: hidden;
+  }
+  
+  /* Optional: Style for the ZoomedOutView image */
+  .zoomed-out-view-image {
+      width: 100%;
+      height: auto;
+      transform: scale(0.2); /* Adjust scale as needed */
+  }
+  
+  /* Optional: Style for the ZoomedOutView pointer */
+  .zoomed-out-view-pointer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      background-color: red;
+      border-radius: 50%;
+      pointer-events: none;
+  }
+  
