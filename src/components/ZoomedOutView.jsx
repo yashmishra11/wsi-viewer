@@ -1,7 +1,8 @@
 import React from 'react';
-import wsiImage from '../../public/7_20241209_024613.png';  // Import the WSI image
 
 const ZoomedOutView = () => {
+    const imageUrl = "/7_20241209_024613.png"; // Correct way to reference public images
+
     return (
         <div style={{
             position: 'relative',
@@ -11,12 +12,12 @@ const ZoomedOutView = () => {
             overflow: 'hidden'   // Hide overflow for the pointer
         }}>
             <img
-                src={wsiImage}
+                src={imageUrl}
                 alt="Zoomed-Out View"
                 style={{
                     width: '100%',    // Ensure the image fits the container
                     height: 'auto',
-                    transform: 'scale(0.2)' //Zoom out image to fit in view
+                    transform: 'scale(0.2)' // Zoom out image to fit in view
                 }}
             />
 
