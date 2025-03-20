@@ -1,16 +1,17 @@
 import React from 'react';
 import ImageZoom from 'react-image-zoom';  // Import the react-image-zoom component
-import wsiImage from '../../public/7_20241209_024613.png';
 import outputData from './WSIViewer/output.json';
+
+const wsiImage = process.env.PUBLIC_URL + "/7_20241209_024613.png";
 
 const BoundingBoxViewer = () => {
   const { detection_results } = outputData.output;
 
   // Configuration options for react-image-zoom
   const zoomSettings = {
-    width: 800,       // Width of the zoomable area (adjust as needed)
-    height: 600,      // Height of the zoomable area (adjust as needed)
-    zoomWidth: 1200,    // Width of the zoomed in image (adjust as needed)
+    width: 800,       
+    height: 600,    
+    zoomWidth: 1200,    // Width of the zoomed-in image (adjust as needed)
     zoomStyle: 'opacity: 1; border: 1px solid black;', // Zoomed image style
     img: wsiImage,       // Path to the main image
   };
