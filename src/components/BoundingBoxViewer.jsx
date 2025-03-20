@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import ImageZoom from 'react-image-zoom';
 const wsiImage = '/img/7_20241209_024613.png';
-import outputData from './WSIViewer/output.json'; // Adjust path based on your structure
+import outputData from './WSIViewer/output.json';
+import '../css/BoundingBoxViewer.css';
+
 
 const BoundingBoxViewer = () => {
     const [data, setData] = useState(outputData); // Use imported JSON data
