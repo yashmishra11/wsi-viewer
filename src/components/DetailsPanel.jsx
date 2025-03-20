@@ -1,8 +1,20 @@
-import React from 'react';
-import outputData from './WSIViewer/output.json';  // Import the JSON data
+import React, { useState, useEffect } from 'react';
 
 const DetailsPanel = () => {
-    // Destructure the output.detection_results from the imported JSON
+    const [outputData, setOutputData] = useState(null);
+
+    useEffect(() => {
+        fetch(`${process.env.PUBLIC_URL}/output.json`)
+            .then(response => response.json())
+            .then(data => setOutputData(data))
+            .catch(error => console.error('Error loading JSON:', error));
+    }, []);
+
+    // Prevent errors by checking if outputData is loaded
+    if (!outputData || !outputData.output) {
+        return <p>Loading...</p>;
+    }
+
     const { detection_results } = outputData.output;
 
     // Extract unique labels from the detection results
