@@ -1,23 +1,25 @@
 import React from 'react';
+import imageUrl from "../assets/7_20241209_024613.png";  // Correct import
 
 const ZoomedOutView = () => {
-const imageUrl = "/7_20241209_024613.png";  // Public assets are accessed like this
-
     return (
         <div style={{
             position: 'relative',
             width: '200px',       
             height: '150px',      
             border: '1px solid #ccc',
-            overflow: 'hidden'  
+            overflow: 'hidden',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
         }}>
             <img
                 src={imageUrl}
                 alt="Zoomed-Out View"
                 style={{
-                    width: '100%',    
-                    height: 'auto',
-                    transform: 'scale(0.2)' 
+                    width: '200%',    
+                    height: '200%',
+                    objectFit: 'cover' 
                 }}
             />
 
