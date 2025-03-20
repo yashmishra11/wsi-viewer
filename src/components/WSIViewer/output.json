@@ -1,0 +1,31 @@
+{
+  "output": {
+    "detection_results": [
+      [50, 100, 200, 300, "Tumor"],
+      [400, 450, 500, 550, "Normal Tissue"],
+      [600, 650, 700, 750, "Inflammation"]
+    ],
+    "image_metadata": {
+      "total_width": 8000,
+      "total_height": 4000,
+      "tile_size": {
+        "width": 512,
+        "height": 512
+      },
+      "pyramid_levels": [
+        {
+          "level": 0,
+          "tiles_count": [16, 8]
+        },
+        {
+          "level": 1,
+          "tiles_count": [8, 4]
+        },
+        {
+          "level": 2,
+          "tiles_count": [4, 2]
+        }
+      ]
+    }
+  }
+}
