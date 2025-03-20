@@ -1,5 +1,7 @@
 import React from "react";
 const wsiImage = '/img/7_20241209_024613.png';
+import '../css/ZoomOutView.css';
+
 
 const ZoomedOutView = () => {
   return (
