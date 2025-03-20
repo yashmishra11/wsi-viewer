@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ImageZoom from 'react-image-zoom';  // Import the react-image-zoom component
-import outputData from './WSIViewer/output.json';
 
 const wsiImage = process.env.PUBLIC_URL + "/7_20241209_024613.png";
 
 const BoundingBoxViewer = () => {
+  const [outputData, setOutputData] = useState(null);
+
+  useEffect(() => {
+    fetch(`${process.env.PUBLIC_URL}/output.json`)  // Fetch JSON from public folder
+      .then(response => response.json())
+      .then(data => setOutputData(data))
+      .catch(error => console.error('Error loading JSON:', error));
+  }, []);
+
+  if (!outputData) return <p>Loading...</p>;
+
   const { detection_results } = outputData.output;
 
   // Configuration options for react-image-zoom
   const zoomSettings = {
     width: 800,       
     height: 600,    
-    zoomWidth: 1200,    // Width of the zoomed-in image (adjust as needed)
+    zoomWidth: 1200,    // Width of the zoomed in image (adjust as needed)
     zoomStyle: 'opacity: 1; border: 1px solid black;', // Zoomed image style
     img: wsiImage,       // Path to the main image
   };
