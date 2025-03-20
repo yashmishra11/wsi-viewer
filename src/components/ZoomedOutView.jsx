@@ -1,5 +1,5 @@
 import React from 'react';
-import imageUrl from "../7_20241209_024613.png";
+import imageUrl from "./7_20241209_024613.png";
 
 const ZoomedOutView = () => {
     return (
