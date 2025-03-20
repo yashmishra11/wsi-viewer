@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ZoomedOutView = () => {
-    const imageUrl = "/7_20241209_024613.png";  // Directly reference the public image
+const imageUrl = "/7_20241209_024613.png";  // Public assets are accessed like this
 
     return (
         <div style={{
