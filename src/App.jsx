@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BoundingBoxViewer from './components/BoundingBoxViewer';
 import DetailsPanel from './components/DetailsPanel';
 import ZoomedOutView from './components/ZoomedOutView';
+import './css/global.css';
+
 
 function App() {
   return (
