@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import outputData from './WSIViewer/output.json'; // Adjust path based on your structure
 const wsiImage = '/img/7_20241209_024613.png';
+import '../css/DetailsPanel.css';
+
 
 const DetailsPanel = () => {
     const [data, setData] = useState(outputData); // Use imported JSON data
